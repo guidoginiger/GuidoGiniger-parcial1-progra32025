@@ -111,6 +111,7 @@ function vaciarCarrito() {
   guardarCarritoEnLocalStorage(); // localStorage
 }
 
+// Muestro los productos que se agregan al carrito
 function mostrarCarrito(listado) {
   let htmlCarrito = "";
   let totalItems = 0;

@@ -14,11 +14,21 @@ h2 {
 header {
   background-color: rgb(4, 204, 4);
   padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 header > a {
   text-decoration: none;
   color: white;
+}
+
+.nombreAlumno {
+  color: white;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .logo {
@@ -35,31 +45,51 @@ header > a {
   border-radius: 4px;
   border: none;
   width: 250px;
+  margin-left: 20px;
+  margin-right: 10px;
 }
 
 .carrito {
+  color: white;
   font-size: 1rem;
 }
 
+#contador-carrito{
+  font-weight: bold; 
+}
 /* Seccion productos */
 
 .seccion-productos {
   padding: 20px;
-  
 }
 
-.card-producto {
-  border: 1px solid #ccc;
+.contenedor-productos {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  gap: 10px;
+}
 
+.card-producto {
+  width: 180px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card-producto img {
   width: 130px;
   border-radius: 5px;
   height: 115px;
+  margin-bottom: 5px;
+}
+
+.card-producto img:hover {
+  width: 160px;
+  transition: all 0.3s ease;
 }
 
 .card-producto h3 {
@@ -72,10 +102,42 @@ header > a {
   color: #333;
 }
 
-.card-producto button:hover {
-  background-color: #218838;
+.card-producto button {
+  color: black;
+  padding: 10px 20px;
+  border: solid 1px #218838;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin: 10px 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+.card-producto button:hover {
+  background-color: rgb(4, 204, 4);
+}
+
+.boton-ordenar,
+.boton-vaciar, .boton-eliminar {
+  background-color: rgb(4, 204, 4);
+  color: white;
+  padding: 10px 20px;
+  border: solid 1px #218838;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin: 10px 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton-ordenar:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+.boton-vaciar:hover, .boton-eliminar:hover{
+    background-color: red;
+    border: solid 2px red;
+    transform: translateY(-2px);
+}
 
 
 /* Seccion carrito */
@@ -90,7 +152,8 @@ header > a {
   list-style-type: none;
 }
 
-.nombre-item, .info-carrito {
+.nombre-item,
+.info-carrito {
   font-size: 20px;
 }
 
@@ -107,6 +170,17 @@ header > a {
 }
 
 .total-carrito {
-  font-size: 1.2rem;
-  text-align: right;
+    font-size: 1.5rem;
+    font-weight: bold; 
+    text-align: right;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid black;
+    color: #28a745;
+}
+
+#precio-total {
+    color: black;
+    font-size: 1.8rem;
+    margin-left: 10px;
 }
